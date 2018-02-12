@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="Images/favicon.png">
+    <title>Perkins Eastman Portal</title>
+    <link rel="stylesheet" type="text/css" href="Style/common.css">
+    <meta name="viewport" content="width=device-width, initial-scale=0.90">
+    <style type="text/css">
+		#iOS{
+			background-image: url("Images/Apple.png");
+		}
+		#Droid{
+			background-image: url("Images/Droid.png")
+		}
+    </style>
+    <script>
+    	/** 
+		 * Display the proper icons based on OS.
+		 * 
+		 *
+		 * @DOM manipulation
+		 */
+		window.onload=function(){
+			if(getMobileOperatingSystem() == 'iOS'){
+				document.getElementById('iOS').style.display='block';
+			 	document.getElementById('Copy').style.display='block';
+			 	document.getElementById('Blank').style.display='none';
+			}
+			else if(getMobileOperatingSystem() == 'Android'){
+			 	document.getElementById('Droid').style.display='block';
+			 	document.getElementById('Copy').style.display='block';
+			 	document.getElementById('Blank').style.display='none';
+			}
+			else{
+			 	;
+			}
+		}
+
+		/** getMobileOperatingSystem()
+		 * Determine the mobile operating system.
+		 * This function either returns 'iOS', 'Android' or 'unknown'
+		 *
+		 * @returns {String}
+		 */
+
+			function getMobileOperatingSystem() {
+			  var userAgent = navigator.userAgent;
+			  if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) ){
+			    return 'iOS';
+			  }else if( userAgent.match( /Android/i ) ){
+			    return 'Android';
+			  }else if(userAgent.match( /Mac OS X/i ) ){
+			    return 'OSX';
+			  }
+			}
+    </script>
+ </head>
+  
+ <body>
+    <div id="Main_Container">
+  <div id = "BannerContainer">
+  	<a href="iisstart.htm">
+  		<img id="PE_Banner" src="Images/PE_banner.png">
+  	</a>
+  	</div>
+        <div id="Tile_Container">
+            <!-- Start Row 1 -->
+            <a id="iOS" class="Tile Variable" href="https://itunes.apple.com/us/app/appName/id577435836?mt=8" title="iOS">
+                <span>iOS</span>
+            </a>
+
+            <a id="Droid" class="Tile Variable" href="http://market.android.com/search?q=pname:com.deltek.vision.time" title="Droid">
+                <span>Droid</span>
+            </a>
+            <div id="Copy">
+                <em>Touch T&E is a mobile only app.</em>
+            </div>
+            <div id="Copy">
+                <em><a href="Touch_Instructions.pdf">Click here for installation instructions.</a></em>
+            </div>
+        </div>
+	</div>	
+</body>
+</html>

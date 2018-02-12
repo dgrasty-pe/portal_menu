@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="Images/favicon.png">
+    <title>Perkins Eastman Portal</title>
+    <link rel="stylesheet" type="text/css" href="Style/common.css">
+    <meta name="viewport" content="width=device-width, initial-scale=0.90">
+    <style type="text/css">
+		#BOS{
+			background-image: url("Images/BOS.png");
+		}
+		#CHI{
+			background-image: url("Images/CHI.png");
+		}
+		#CLT{
+			background-image: url("Images/CLT.png");
+		}
+		#DAL{
+			background-image: url("Images/DAL.png");
+		}
+		#DCA{
+			background-image: url("Images/DCA.png");
+		}
+		#DXB{
+			background-image: url("Images/DXB.png");
+		}
+		#GYE{
+			background-image: url("Images/GYE.png");
+		}
+		#LAX{
+			background-image: url("Images/LAX.png");
+		}
+		#MMB{
+			background-image: url("Images/MMB.png");
+		}
+		#NYC{
+			background-image: url("Images/NYC.png");
+		}
+		#PGH{
+			background-image: url("Images/PGH.png");
+		}
+		#SFO{
+			background-image: url("Images/SFO.png");
+		}
+		#SHA{
+			background-image: url("Images/SHA.png");
+		}
+		#STA{
+			background-image: url("Images/STA.png");
+		}
+		#Droid{
+			background-image: url("Images/Droid.png");
+		}
+		#iOS{
+			background-image: url("Images/Apple.png");
+		}
+		#OSX{
+			background-image: url("Images/Apple.png");
+		}
+		#Copy2{	
+			text-indent: 9px;
+			clear: left;
+		}
+		#Blank{
+			background-image: url("Images/Blank.png");
+			background-position: 0 0px;
+		}
+    </style>
+
+    <script>
+    	/** 
+		 * Display the proper icons based on OS.
+		 * @DOM manipulation
+		 */
+		window.onload=function(){
+			if(getMobileOperatingSystem() == 'iOS'){
+				document.getElementById('iOS').style.display='block';
+			 	document.getElementById('Copy').style.display='block';
+			 	document.getElementById('Blank').style.display='none';
+
+			}
+			else if(getMobileOperatingSystem() == 'Android'){
+			 	document.getElementById('Droid').style.display='block';
+			 	document.getElementById('Copy').style.display='block';
+			 	document.getElementById('Blank').style.display='none';
+			}
+			else if(getMobileOperatingSystem() == 'OSX'){
+			 	document.getElementById('OSX').style.display='block';
+			 	document.getElementById('Copy2').style.display='block';
+			 }else{
+			 	;
+			 }
+		}
+
+		/** getMobileOperatingSystem()
+		 * Determine the mobile operating system.
+		 * @returns {String}
+		 */
+
+			function getMobileOperatingSystem() {
+			  var userAgent = navigator.userAgent;
+			  if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) ){
+			    return 'iOS';
+			  }else if( userAgent.match( /Android/i ) ){
+			    return 'Android';
+			  }else if(userAgent.match( /Mac OS X/i ) ){
+			    return 'OSX';
+			  }else{
+			  	return 'Unknown';
+			  }
+			}
+    </script>
+  
+  </head>
+
+  <body>
+     <div id="Main_Container">
+  <div id = "BannerContainer">
+    <a href="iisstart.htm">
+  		<img id="PE_Banner" src="Images/PE_banner.png">
+  	</a>
+  	</div>
+    <div id="Tile_Container">
+
+		  	<a id="NYC" class = "Tile" href="NYC_Cloud_Boxes.html" title="NYC">
+		  		<span>NYC</span>
+		  	</a>
+		  	<a id="BOS" class = "Tile" href="BOS_Cloud_Boxes.html" title="BOS">
+		  		<span>BOS</span>
+		  	</a>
+
+		  	<a id="CHI" class = "Tile" href="CHI_Cloud_Boxes.html" title="CHI">
+		  		<span>CHI</span>
+		  	</a>
+
+		  	<a id="CLT" class = "Tile" href="CLT_Cloud_Boxes.html" title="CLT">
+		  		<span>CLT</span>
+		  	</a>
+
+		  	<a id="DAL" class = "Tile" href="DAL_Cloud_Boxes.html" title="DAL">
+		  		<span>DAL</span>
+		  	</a>
+
+		  	<a id="DCA" class = "Tile" href="DCA_Cloud_Boxes.html" title="DCA">
+		  		<span>DCA</span>
+		  	</a>
+
+		    <a id="LAX" class = "Tile" href="LAX_Cloud_Boxes.html" title="LAX">
+		  		<span>LAX</span>
+		  	</a>
+
+		  	<a id = "PGH" class = "Tile" href="PGH_Cloud_Boxes.html" title="PGH">
+		  		<span>PGH</span>
+		  	</a>
+
+		  	<a id = "SFO" class = "Tile" href="SFO_Cloud_Boxes.html" title="SFO">
+		  		<span>SFO</span>
+		  	</a>
+
+		  	<a id = "STA" class = "Tile" href="STA_Cloud_Boxes.html" title="STA">
+		  		<span>STA</span>
+		  	</a>
+
+		  	<a id = "SHA" class = "Tile" href="SHA_Cloud_Boxes.html" title="SHA">
+		  		<span>SHA</span>
+		  	</a>
+
+		  	<a id="GYE" class = "Tile" href="GYE_Cloud_Boxes.html" title="GYE">
+		  		<span>GYE</span>
+		  	</a>
+
+		  	<a id="MMB" class = "Tile" href="MMB_Cloud_Boxes.html" title="MMB">
+		  		<span>MMB</span>
+		  	</a>
+
+		  	<a id="DXB" class = "Tile" href="DXB_Cloud_Boxes.html" title="DXB">
+		  		<span>DXB</span>
+		  	</a>	
+
+		  	<a id="Blank" href="#" class="Tile InactiveLink" title="Blank">
+		  		<span>Blank</span>
+		  	</a>
+<!-- OS dependent Variable Elements -->
+			<div id="Copy" class="Variable"><em>Download Remote Desktop for mobile.</em></div>
+
+		  	<a id="Droid" class = "Tile Variable" href="https://play.google.com/store/apps/details?id=com.microsoft.rdc.android&hl=en" title="Droid">
+		  		<span>Droid</span>
+		  	</a>
+
+		  	<a id="iOS" class = "Tile Variable" href="https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8" title="iOS">
+		  		<span>iOS</span>
+			</a>
+
+		  	<div id="Copy2" class="Variable"><em>Download Remote Desktop for Mac.</em></div>
+
+		  	<a id="OSX" class = "Tile Variable" href="https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12" title="iOS">
+		  		<span>Mac</span>
+		  	</a>
+		</div>
+		</div>
+	</body>
+</html>
